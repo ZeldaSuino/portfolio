@@ -11,10 +11,14 @@ h3{
     margin: auto;
 }
 #char_info{
-    border: 12px solid rgba(209, 161, 56, 0.925);
-    border-top: 8px solid rgba(209, 161, 56, 0.925);
-    border-bottom: 8px solid rgba(209, 161, 56, 0.925);
+    border: 12px solid rgba(209, 161, 56, 0);
+    border-top: 8px solid rgba(209, 161, 56, 0);
+    border-bottom: 8px solid rgba(209, 161, 56, 0);
     width: 45rem;
+    background-size: 100% 100%, contain;
+    background-image: url(frame_1.png), url(leather.png);
+    background-origin: border-box;
+    background-clip: border-box, padding-box;
     ul{
         list-style-type: none;
         display: flex;
