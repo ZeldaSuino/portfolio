@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giuliano</title>
+    <link rel="stylesheet" href="https://use.typekit.net/xmy8oqf.css">
+    <link rel="stylesheet" href="title_screen.css">
+    <link rel="stylesheet" href="character_screen.css">
+    <style>
+        body{
+            font-family: "adobe-garamond-pro", serif;
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+        .f{
+            display: flex;
+        }
+        .horizontal{
+            flex-direction: row;
+        }
+        .vertical{
+            flex-direction: column;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div id="title_screen" style="display: none;">
+        <h1>GIULIANO</h1>
+        <div id="start_menu" style="display: none;">
+            <p>Pressione qualquer botão</p>
+        </div>
+        <div id="selection_menu">
+            <ul>
+                <li>Sobre mim</li>
+                <li>Experiência</li>
+                <li>Contato</li>
+            </ul>
+            <footer>Giuliano Dias 2025</footer>
+        </div>
+    </div>
+    <div id="character_screen" class="f vertical" style="gap: 1rem;">
+        <div class="f horizontal">
+        <img alt="icone" style="border: 2px solid brown;">
+        <div class="f vertical" >
+            <h2>Inspecione o personagem</h2> <h3>Sobre mim</h3>
+        </div>
+        </div>
+        <div class="f horizontal" style="gap: 1rem;">
+        <div class="f vertical" style="gap: 1rem;">
+            <div id="char_info">
+                <ul>
+                    <li><span>Giuliano</span></li>
+                    <li><span>Class</span> <span>Programmer</span></li>
+                    <li><span>Class</span> <span>Programmer</span></li>
+                    <li><span>Class</span> <span>Programmer</span></li>
+                    <li><span>Class</span> <span>Programmer</span></li>
+                    <li><span>Class</span> <span>Programmer</span></li>
+                </ul>
+            </div>
+            <div id="char_status">
+                <table>
+                    <tr>
+                        <td>icon</td>
+                        <td>Level</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>text</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>text</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>text</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>text</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>text</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>text</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="char_inventory">
+            </div>
+        </div>
+        <div id="char_preview">
+            <img src="https://media.istockphoto.com/id/184974702/photo/disappointed-young-man-standing.jpg?s=612x612&w=0&k=20&c=BWWkyZDRz3-NR3VxkiWVLLTn2rlnv51-pAc0nSHoboU=">
+        </div>
+        </div>
+    </div>
+    <div id="save_data"></div>
+</body>
+</html>
