@@ -1,51 +1,130 @@
-h2{
-    padding: 0px;
-    margin: 0px;
-}
-h3{
-    padding: 0px;
-    margin: 0px;
-}
-#character_screen{
-    justify-content: center;
+.center{
     margin: auto;
+    text-align: center;
+    justify-items: center;
+    justify-self: center;
 }
-#char_info{
-    border: 12px solid rgba(209, 161, 56, 0);
-    border-top: 8px solid rgba(209, 161, 56, 0);
-    border-bottom: 8px solid rgba(209, 161, 56, 0);
-    width: 45rem;
-    background-size: 100% 100%, contain;
-    background-image: url(frame_1.png), url(leather.png);
-    background-origin: border-box;
-    background-clip: border-box, padding-box;
-    ul{
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
+
+#character_screen{
+    padding: 1rem;
+    align-self: center;
+    border-image: url('Dark-Souls07152020-084027-33035.png') 33% round;
+    border-image-width: 30px;
+
+    justify-self: center;   
+    margin: auto;
+    h2{
+        
+        padding: 0px;
+        padding-top: .4rem;
+        margin: 0px;
+        align-self: baseline;
     }
-    li{
-        display: flex;
-        flex-direction: row;
-        width: 20rem;
-        span{
-            text-align: center;
-            display: inline-block;
-            min-width: 10rem;
+    h3{
+        align-self: baseline;
+        padding: 0px;
+        padding-top: .3rem;
+        margin: 0px;
+    }
+    #char_info{
+        border: 12px solid rgba(209, 161, 56, 0);
+        border-top: 8px solid rgba(209, 161, 56, 0);
+        border-bottom: 8px solid rgba(209, 161, 56, 0);
+        width: 45rem;
+        background-size: 100% 100%, contain;
+        background-image: url(frame_1.png);
+        background-origin: border-box;
+        background-clip: border-box, padding-box;
+        
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        li{
+            display: flex;
+            flex-direction: row;
+            width: 20rem;
+            margin: .1rem;
+            span{
+                box-sizing: border-box;
+                text-align: left;
+                display: inline-block;
+                min-width: 10rem;
+            }
+            span:nth-child(2){
+                text-align: center;
+                display: inline-block;
+                border: 1px solid rgba(241, 154, 60, 0.419);
+                min-width: 10rem;
+            }
+        }
+    }
+    .frame{
+        border: .7rem solid;
+        border-image: url('frame_2.png') fill 33%;
+        border-image-width: 4rem;
+    }
+    #char_status{
+        padding-left: 2.8rem;
+        width: 50%;
+        height: 20rem;
+    }
+    #char_inventory{
+        ul{
+            gap: .4rem;
+            flex-wrap: wrap;
+            list-style: none;
+            display: flex;
+            padding: 0px 2rem;
+        }
+        li{
+            img{height: 2.5rem;}
+        }
+        width: 50%;
+        height: 20rem;
+    }
+    #char_preview{
+        margin-top: .5rem;
+        width: 20%;
+        align-items: center;
+        justify-content: center;
+    }
+    #char_preview img{
+        height: 24rem;
+    }
+    img{
+        image-rendering: pixelated;
+        padding-left: 1rem;
+        height: 4rem;
+    }
+    button{
+        width: 100%;
+        background-image: linear-gradient(#b89b3d, #854e21, #7c3404);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .table{
+        padding: 0px;
+        list-style: none;
+        li{
+            width: 20rem;
+            text-align: left;
         }
         span:nth-child(2){
+            box-sizing: border-box;
+            padding-left: 1rem;
             display: inline-block;
-            border: 2px solid brown;
-            min-width: 10rem;
+            width: 12rem;
+        }
+        span:nth-child(3){
+            width: 3rem;
+            display: inline-block;
+            text-align: right;
         }
     }
-}
-#char_status{
-    border: 2px solid brown;
-}
-#char_preview img{
-    height: 30rem;
-    padding: 2px;
-    border: 2px solid brown;
 }

@@ -1,0 +1,92 @@
+.center{
+    margin: auto;
+    text-align: center;
+    justify-items: center;
+    justify-self: center;
+}
+h2{
+        
+    padding: 0px;
+    padding-top: .4rem;
+    margin: 0px;
+    align-self: baseline;
+}
+h3{
+    align-self: baseline;
+    padding: 0px;
+    padding-top: .3rem;
+    margin: 0px;
+}
+#save_data{
+    padding: 1rem;
+    align-self: center;
+    border-image: url('Dark-Souls07152020-084027-33035.png') 33% round;
+    border-image-width: 30px;
+
+    justify-self: center;   
+    margin: auto;
+    
+    
+    .frame{
+        border: .7rem solid;
+        border-image: url('frame_2.png') fill 33%;
+        border-image-width: 4rem;
+    }
+    #container{
+        align-items: center;
+        vertical-align: center;
+    }
+    a{
+        color: white;
+    }
+    #container p{
+        line-height: 4rem;
+        border: 12px solid rgba(209, 161, 56, 0);
+        border-top: 8px solid rgba(209, 161, 56, 0);
+        border-bottom: 8px solid rgba(209, 161, 56, 0);
+        width: 45rem;
+        background-size: 100% 100%, contain;
+        background-image: url(frame_3.png);
+        background-origin: border-box;
+        background-clip: border-box, padding-box;
+        
+    }
+    #char_preview img{
+        height: 24rem;
+    }
+    img{
+        image-rendering: pixelated;
+        padding-left: 1rem;
+        height: 4rem;
+    }
+    button{
+        height: 2rem;
+        margin: 1rem 0rem;
+        width: 100%;
+        background-image: linear-gradient(#b89b3d, #854e21, #7c3404);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .table{
+        padding: 0px;
+        list-style: none;
+        li{
+            width: 20rem;
+            text-align: left;
+        }
+        span:nth-child(2){
+            box-sizing: border-box;
+            padding-left: 1rem;
+            display: inline-block;
+            width: 12rem;
+        }
+        span:nth-child(3){
+            width: 3rem;
+            display: inline-block;
+            text-align: right;
+        }
+    }
+}

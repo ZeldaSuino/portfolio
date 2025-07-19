@@ -1,4 +1,5 @@
 #title_screen{
+    align-self: center;
     h1{
         text-shadow: 0rem 0rem 1rem hsl(40, 90%, 50%);
         font-size: 6rem;

@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="https://use.typekit.net/xmy8oqf.css">
     <link rel="stylesheet" href="title_screen.css">
     <link rel="stylesheet" href="character_screen.css">
+    <link rel="stylesheet" href="save_data.css">
+
     <style>
+        .inactive{
+            display: none !important;
+        }
         body{
+            justify-content: center;
+            display: flex;
+            box-sizing: border-box;
+            height: 90vh;
             font-family: "adobe-garamond-pro", serif;
             background-color: black;
             text-align: center;
             color: white;
         }
+        
         .f{
             display: flex;
         }
@@ -24,91 +34,142 @@
         .vertical{
             flex-direction: column;
         }
-        
+        .container{
+            max-width: 1000px;
+        }
     </style>
 
 </head>
 <body>
-    <div id="title_screen" style="display: none;">
+    <div id="title_screen" class="screen">
         <h1>GIULIANO</h1>
-        <div id="start_menu" style="display: none;">
+        <div id="start_menu" class = "menu">
             <p>Pressione qualquer botão</p>
         </div>
-        <div id="selection_menu">
+        <div id="selection_menu" class="menu inactive">
             <ul>
-                <li>Sobre mim</li>
-                <li>Experiência</li>
-                <li>Contato</li>
+                <li onclick="swapScreen('screen', 'character_screen')">Sobre mim</li>
+                <li onclick="swapScreen('screen', 'save_data')">Experiência</li>
+                <li onclick="alert('atualmente indisponível!')">Contato</li>
             </ul>
-            <footer>Giuliano Dias 2025</footer>
+        </div>
+        <footer style="position: absolute; bottom: 0px; justify-self: center;">Giuliano Dias 2025</footer>
+    </div>
+    <div id="character_screen" class="inactive screen center" style="gap: 1rem;">
+        <div class= "f vertical center container">
+            <div class="f horizontal" style="gap: 1rem;">
+            <img alt="icone" src="cabeça.png">
+            <div class="f vertical" style="text-align: left;">
+                <h2>Inspecione o personagem</h2>
+                <h3>Sobre mim</h3>
+            </div>
+            </div>
+            <div class="f horizontal center" style="gap: 1rem;">
+            <div class="f vertical" style="gap: 1rem;">
+                <div id="char_info">
+                    <ul>
+                        <li><span>Giuliano</span></li>
+                        <li><span>Classe</span> <span>Programador</span></li>
+                        <li><span>Especialidade</span> <span>Java</span></li>
+                        <li><span>Cargo Atual</span> <span>Estudante/Estagiário</span></li>
+                        <li><span>Curso</span> <span title="3/4 anos">Técnico Informática*</span></li>
+                        <li><span>Instituição</span> <span>IFPR Londrina</span></li>
+                        <li><span>Instituição</span> <span>IFPR Londrina</span></li>
+                        <li><span></span><button onclick="swapScreen('screen', 'title_screen')">Já vi o suficiente</button></li>
+                    </ul>
+                </div>
+                <div class="f horizontal" style="gap: 1rem">
+                    <div id="char_status" class="frame">
+                        <ul class="table f vertical" style="gap: .8rem">
+                            <li>
+                                <span>🎂</span>
+                                <span>Level</span>
+                                <span>18</span>
+                            </li>
+                            <li>
+                                <span>👨‍💻</span>
+                                <span>Programação</span>
+                                <span>5</span>
+                            </li>
+                            <li>
+                                <span>⭐</span>
+                                <span>Ilustração</span>
+                                <span>5</span>
+                            </li>
+                            <li>
+                                <span>🎸</span>
+                                <span>Música</span>
+                                <span>4</span>
+                            </li>
+                            <li>
+                                <span>🎮</span>
+                                <span>Jogos</span>
+                                <span>4</span>
+                            </li>
+                            <li>
+                                <span>🐱‍👤</span>
+                                <span>Mangá</span>
+                                <span>6</span>
+                            </li>
+                            <li>
+                                <span>💥</span>
+                                <span>Filmes</span>
+                                <span>4</span>
+                            </li>
+                        </table>
+                    </div>
+                    <div id="char_inventory" class="frame">
+                        <ul>
+                            <li><img title="Java" src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png"></li>
+                            <li><img title="Python" src="https://raw.githubusercontent.com/learnbr/python/master/logo.png"></li>
+                            <li><img title="RPA com Automation Anywhere" src="https://www.automationanywhere.com/sites/default/files/images/AAI/automation-anywhere-logo-a-only.png"></li>
+                            <li><img title="C" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1853px-C_Programming_Language.svg.png"></li>
+                            <li><img title="Javascript" src="https://images.vexels.com/media/users/3/166403/isolated/preview/a5a33bf3004830a2bd581e9fa65de660-javascript-programming-language-icon.png?w=360"></li>
+                            <li><img title="Macros Excel" src="https://img.icons8.com/color/512/ms-excel.png"></li>
+                            <li><img title="MySql" src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="char_preview" class="f frame">
+                <img src="giuliano.png">
+            </div>
+            </div>
         </div>
     </div>
-    <div id="character_screen" class="f vertical" style="gap: 1rem;">
-        <div class="f horizontal">
-        <img alt="icone" style="border: 2px solid brown;">
-        <div class="f vertical" >
-            <h2>Inspecione o personagem</h2> <h3>Sobre mim</h3>
-        </div>
-        </div>
-        <div class="f horizontal" style="gap: 1rem;">
-        <div class="f vertical" style="gap: 1rem;">
-            <div id="char_info">
-                <ul>
-                    <li><span>Giuliano</span></li>
-                    <li><span>Class</span> <span>Programmer</span></li>
-                    <li><span>Class</span> <span>Programmer</span></li>
-                    <li><span>Class</span> <span>Programmer</span></li>
-                    <li><span>Class</span> <span>Programmer</span></li>
-                    <li><span>Class</span> <span>Programmer</span></li>
-                </ul>
-            </div>
-            <div id="char_status">
-                <table>
-                    <tr>
-                        <td>icon</td>
-                        <td>Level</td>
-                        <td>18</td>
-                    </tr>
-                    <tr>
-                        <td>icon</td>
-                        <td>text</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>icon</td>
-                        <td>text</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>icon</td>
-                        <td>text</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>icon</td>
-                        <td>text</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>icon</td>
-                        <td>text</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>icon</td>
-                        <td>text</td>
-                        <td>0</td>
-                    </tr>
-                </table>
-            </div>
-            <div id="char_inventory">
+    <div id="save_data" class="inactive screen center" style="gap: 1rem;">
+        
+        <div class="f horizontal" style="gap: 1rem; justify-self: start;">
+            <img alt="icone" src="cabeça.png">
+            <div class="f vertical" style="text-align: left;">
+                <h2>Lista de projetos</h2>
+                <h3>Links para o github</h3>
             </div>
         </div>
-        <div id="char_preview">
-            <img src="https://media.istockphoto.com/id/184974702/photo/disappointed-young-man-standing.jpg?s=612x612&w=0&k=20&c=BWWkyZDRz3-NR3VxkiWVLLTn2rlnv51-pAc0nSHoboU=">
-        </div>
+        <div id="container">
+            <p><a target="_blank" href="https://github.com/ZeldaSuino/zsJaylibGameofLife">Conway's Game of Life usando Jaylib</a></p>
+            <p><a target="_blank" href="https://github.com/ZeldaSuino/maio_laranja">Projeto de site sobre Maio Laranja</a></p>
+            <p><a target="_blank" href="https://github.com/ZeldaSuino/manga">Site com meus mangás favoritos</a></p>
+            <button onclick="swapScreen('screen', 'title_screen')">Já vi o suficiente</button>
         </div>
     </div>
-    <div id="save_data"></div>
+    <script>
+        document.addEventListener('keydown', start)
+        function start(){
+            activeMenu = Array.from(document.querySelectorAll('.' + 'menu')).find(x => x.classList.contains('inactive') == false)
+            if (activeMenu == document.getElementById('start_menu')){
+                swapScreen('menu', 'selection_menu')
+                document.removeEventListener('keydown', start)
+            }
+        }
+
+        function swapScreen(sec, name){
+            activeScreen = Array.from(document.querySelectorAll('.' + sec)).find(x => x.classList.contains('inactive') == false)
+            newScreen = document.querySelector('#'+name)
+            activeScreen.classList.add('inactive')
+            newScreen.classList.remove('inactive')
+        }
+    </script>
+
 </body>
 </html>
