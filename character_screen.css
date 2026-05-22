@@ -8,7 +8,7 @@
 #character_screen{
     padding: 1rem;
     align-self: center;
-    border-image: url('Dark-Souls07152020-084027-33035.png') 33% round;
+    border-image: url('imagens/overlays/leather.png') 33% round;
     border-image-width: 30px;
 
     justify-self: center;   
@@ -32,7 +32,7 @@
         border-bottom: 8px solid rgba(209, 161, 56, 0);
         width: 45rem;
         background-size: 100% 100%, contain;
-        background-image: url(frame_1.png);
+        background-image: url(imagens/overlays/frame_1.png);
         background-origin: border-box;
         background-clip: border-box, padding-box;
         
@@ -63,7 +63,7 @@
     }
     .frame{
         border: .7rem solid;
-        border-image: url('frame_2.png') fill 33%;
+        border-image: url('imagens/overlays/frame_2.png') fill 33%;
         border-image-width: 4rem;
     }
     #char_status{
