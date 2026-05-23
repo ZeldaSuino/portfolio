@@ -49,8 +49,8 @@
         <div id="selection_menu" class="menu inactive">
             <ul>
                 <li onclick="swapScreen('screen', 'character_screen')">Sobre mim</li>
-                <li onclick="swapScreen('screen', 'save_data')">Experiência</li>
-                <li onclick="alert('atualmente indisponível!')">Contato</li>
+                <li onclick="swapScreen('screen', 'save_data')">Projetos</li>
+                <li onclick="swapScreen('screen', 'contato')">Contato</li>
             </ul>
         </div>
         <footer style="position: absolute; bottom: 0px; justify-self: center;">Giuliano Dias 2025</footer>
@@ -58,7 +58,7 @@
     <div id="character_screen" class="inactive screen center" style="gap: 1rem;">
         <div class= "f vertical center container">
             <div class="f horizontal" style="gap: 1rem;">
-            <img alt="icone" src="imagens/overlays/cabeça.png">
+            <img class="icon" alt="icone" src="imagens/overlays/cabeça.png">
             <div class="f vertical" style="text-align: left;">
                 <h2>Inspecione o personagem</h2>
                 <h3>Sobre mim</h3>
@@ -73,12 +73,12 @@
                         <li><span>Especialidade</span> <span>Java</span></li>
                         <li><span>Cargo Atual</span> <span>Estudante/Estagiário</span></li>
                         <li><span>Curso</span> <span title="Último ano">Técnico Informática*</span></li>
-                        <li><span>Instituição</span> <span>IFPR Londrina</span></li>
+                        <li><span>Empresa Atual</span> <span>TCS</span></li>
                         <li><span>Instituição</span> <span>IFPR Londrina</span></li>
                         <li><span></span><button onclick="swapScreen('screen', 'title_screen')">Já vi o suficiente</button></li>
                     </ul>
                 </div>
-                <div class="f horizontal" style="gap: 1rem">
+                <div class="f horizontal" style="gap: 1rem;">
                     <div id="char_status" class="frame">
                         <ul class="table f vertical" style="gap: .8rem">
                             <li>
@@ -122,11 +122,13 @@
                         <ul>
                             <li><img title="Java" src="imagens/skills/java.png"></li>
                             <li><img title="Python" src="imagens/skills/python.png"></li>
-                            <li><img title="RPA com Automation Anywhere" src="imagens/skills/automation_anywhere.png"></li>
+                            <li><img title="Automation Anywhere" src="imagens/skills/automation_anywhere.png"></li>
                             <li><img title="C" src="imagens/skills/c.png"></li>
+                            <li><img title="C#" src="imagens/skills/csharp.png"></li>
                             <li><img title="Javascript" src="imagens/skills/javascript.png"></li>
                             <li><img title="Macros Excel" src="imagens/skills/ms-excel.png"></li>
-                            <li><img title="MySql" src="imagens/skills/mysql.png">
+                            <li><img title="MySql" src="imagens/skills/mysql.png"></li>
+                            <li><img title="Amazon Web Services" src="imagens/skills/aws.webp"></li>
                         </ul>
                     </div>
                 </div>
@@ -138,9 +140,8 @@
         </div>
     </div>
     <div id="save_data" class="inactive screen center" style="gap: 1rem;">
-        
         <div class="f horizontal" style="gap: 1rem; justify-self: start;">
-            <img alt="icone" src="imagens/overlays/cabeça.png">
+            <img class="icon" alt="icone" src="imagens/overlays/cabeça.png">
             <div class="f vertical" style="text-align: left;">
                 <h2>Lista de projetos</h2>
                 <h3>Links para o github</h3>
@@ -153,6 +154,8 @@
             <button onclick="swapScreen('screen', 'title_screen')">Já vi o suficiente</button>
         </div>
     </div>
+    <div id="contato" class="inactive screen center">
+        <button onclick="swapScreen('screen', 'title_screen')">Já vi o suficiente</button>
     <script>
         document.addEventListener('keydown', start)
         function start(){
